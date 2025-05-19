@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <th:block th:fragment="sideFragment">
+    <div id="sidenav" class="sidenav">
+      <ul>
+        <li class="menu">
+          <a href="/admin/page/main">메인</a>
+        </li>
+        <li class="menu">
+          <a href="/admin/page/management/users">유저 관리</a>
+        </li>
+        <li class="menu">
+          <a href="/admin/page/management/posts">게시글 관리</a>
+        </li>
+        <li class="menu">
+          상품 관리
+          <ul class="sub_menu">
+            <li><a href="/admin/page/management/product/add">상품등록</a></li>
+            <li><a href="/admin/page/management/product">상품관리</a></li>
+          </ul>
+        </li>
+        <li class="menu">
+          <a href="/admin/page/management/payments">결제 관리</a>
+        </li>
+        <!-- <li class="menu">
+          배경영상 관리
+          <ul class="sub_menu">
+            <li><a href="/admin/page/management/background">영상등록</a></li>
+          </ul>
+        </li> -->
+        <!-- <li class="menu">
+          약관 관리
+          <ul class="sub_menu">
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+          </ul>
+        </li> -->
+      </ul>
+    </div>
+  </th:block>
+</html>

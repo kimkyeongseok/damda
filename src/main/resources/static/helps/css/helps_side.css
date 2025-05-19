@@ -1,0 +1,39 @@
+/* The side navigation menu */
+.sidenav {
+  width: 20%;
+  background-color: #fff; /* Black*/
+  transition: all 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  padding: 1rem;
+}
+ul {
+  padding: 0;
+  list-style: none;
+  color: #000;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+ul.sub_menu {
+  /* visibility: hidden; */
+  background-color: #fff;
+  height: 0;
+  padding-left: 1rem;
+  font-weight: normal;
+}
+.menu:hover li.menu {
+  background-color: #ff0034;
+}
+
+.menu:hover ul.sub_menu {
+  visibility: visible;
+  height: 6rem;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 780px) {
+  .sidenav {
+    width: 50%;
+  }
+  ul {
+    font-size: 1rem;
+  }
+}

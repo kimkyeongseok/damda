@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Damda</title>
+  </head>
+  <body>
+    <div
+      id="wrap"
+      style="
+        max-width: 500px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 15px;
+      "
+    >
+      <img src="https://www.hidamda.com/img/logo/black.png" alt="Damda" width="140" height="55" />
+      <p id="cut_line" style="border-bottom: 0.063rem solid #e8e8e8"></p>
+      <p>
+        <span
+          th:text="${nickName}"
+          style="color: black; font-size: 1rem"
+        ></span>
+        <span style="color: black; font-size: 1rem">님, 안녕하세요!</span>
+      </p>
+      <p>
+        <span th:text="${msg1}" style="color: black; font-size: 1rem"></span
+        ><br />
+        <span th:text="${msg2}" style="color: black; font-size: 1rem"></span
+        ><br />
+        <span style="color: #ff0034"
+          >해당 링크는 메일이 발송된 시점으로부터 5분간 유효합니다.</span
+        >
+      </p>
+      <a th:href="${url}" style="text-decoration: none">
+        <div
+          id="button"
+          style="
+            border: none;
+            text-align: center;
+            background-color: #ff0034;
+            padding: 6px 20px 10px 20px;
+            border-radius: 6px;
+          "
+        >
+          <span
+            th:text="${buttonText}"
+            style="color: #fff; font-size: 1rem"
+          ></span>
+        </div>
+      </a>
+    </div>
+  </body>
+</html>

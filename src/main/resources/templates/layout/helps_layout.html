@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="/img/logo/favicon.jpg" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" sizes="48x48" href="/img/icon/48.jpg" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/img/icon/192.jpg" />
+    <link rel="apple-touch-icon" sizes="512x512" href="/img/icon/512.jpg" />
+    <meta property="og:url" content="https://www.hidamda.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Damda" />
+    <meta property="og:description" content="당신의 아름다운 추억을 담다" />
+    <meta property="og:image" content="/img/icon/192.jpg" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="/helps/js/showLoading.js"></script>
+    <link rel="stylesheet" href="/helps/css/helps_side.css" />
+    <link rel="stylesheet" href="/helps/css/helps_web.css" />
+  </head>
+  <body>
+    <!-- <header th:replace="fragments/header :: headerFragment"></header> -->
+    <section
+      style="
+        display: flex;
+        max-width: 1000px;
+        min-width: 500px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 2rem;
+      "
+    >
+      <th:block th:replace="fragments/helps_side::sideFragment"></th:block>
+      <div layout:fragment="content" style="height: 100vh; padding: 2rem"></div>
+    </section>
+    <th:block th:replace="fragments/helps_footer::footerFragment"></th:block>
+  </body>
+</html>

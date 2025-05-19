@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layout/admin_layout}"
+>
+  <head> </head>
+  <div layout:fragment="content">
+    <p style="font-weight: bold">상품 등록</p>
+    <form enctype="multipart/form-data" id="createForm">
+      <p>
+        <label for="name">상품이름 </label>
+        <input
+          type="text"
+          placeholder="상품이름"
+          name="name"
+          id="name"
+          required
+        />
+      </p>
+      <p>
+        <label for="isFree">유/무료 </label>
+        <input
+          type="radio"
+          id="isFree"
+          name="isFree"
+          value="true"
+          checked
+          onchange="check(this.value)"
+        />무료
+        <input
+          type="radio"
+          id="isFree"
+          name="isFree"
+          value="false"
+          onchange="check(this.value)"
+        />유료
+      </p>
+      <p>
+        <label for="category">종류 </label>
+        <input type="radio" name="category" value="sticker" checked /> 스티커
+        <input type="radio" name="category" value="template" /> 템플릿
+        <input type="radio" name="category" value="watermark" /> 워터마크
+      </p>
+      <p>
+        <label for="price">가격 </label>
+        <input
+          type="text"
+          placeholder="가격"
+          name="price"
+          id="price"
+          value="0"
+          required
+        />
+      </p>
+      <p>
+        <label for="img">이미지 업로드 </label>
+        <input
+          type="file"
+          accept=".gif, .jpg, .png"
+          placeholder="대표 이미지"
+          name="img"
+          multiple="multiple"
+          required
+        />
+      </p>
+      <!-- <input type="file" placeholder="Detail images" name="pdDetail" id="pdDetail" multiple="multiple">
+        <br><br> -->
+      <!-- TODO: EOFexception 발생 시 submit => button (but, required 적용 안됨)-->
+      <button type="button" onclick="create()">등록하기</button>
+    </form>
+    <script type="text/javascript" src="/js/admin_product.js"></script>
+  </div>
+</html>

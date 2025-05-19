@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layout/helps_layout}"
+>
+  <head>
+    <link rel="stylesheet" href="/helps/css/reset_password.css" />
+    <title>회원 탈퇴</title>
+    </head>
+    <body>
+    <div layout:fragment="content">
+        <img
+          src="/img/logo/black.png"
+          alt="Damda"
+          width="120"
+          height="45"
+        />
+          <p id="cut_line" style="border-bottom: 0.063rem solid #e8e8e8"></p>
+          <div>
+            <h4>담다 회원 탈퇴</h4><br>
+            <p><strong>탈퇴 전 확인해주세요!</strong> </p>
+            <p>탈퇴한 아이디로 재가입,복구가 불가능합니다(카카오, 구글 로그인 포함)</p>  
+            <p>피드에 등록한 게시물은 탈퇴 후에도 남아 있습니다. 글이 남아 있는 것을 원치 않으시면 삭제 후 탈퇴를 진행해주세요.</p>
+            <p>회원정보는 일정기간 보관되며 기간이 지나면 모두 삭제됩니다.</p>
+          </div>
+        
+          <p style="color: red; font-size: 1.2rem;"><strong>아래 '탈퇴하기' 버튼을 누르시면 바로 탈퇴가 완료됩니다.</strong></p>
+          <div style="display: flex; flex-direction: column">
+            <!-- <input type="password" id="userPw" placeholder="PASSWORD" name="userPw" /> -->
+          </div>
+          <br>
+          <a style="text-decoration: none">
+          <div
+            id="button"
+            style="
+              position: relative;
+              border: none;
+              text-align: center;
+              background-color: #ff0034;
+              padding: 6px 20px 10px 20px;
+              border-radius: 6px;
+              cursor: pointer;
+            "
+              onclick="deactivateUserAccount()"
+            >
+              <div id="loading" class="spinner-border text-light" role="status" style="visibility: hidden; position: absolute;">
+                <span class="sr-only">Loading...</span>
+              </div>
+              <span id="buttonText" style="color: #fff; font-size: 1rem;">탈퇴하기</span>
+            </div>
+          </a>
+      <div>
+      <script>
+        function deactivateUserAccount() {
+          let result = confirm("정말로 탈퇴 하시겠습니까?")
+          if(result){
+            showLoading(true);
+            let button = document.getElementById("button");
+
+            setTimeout(() => {
+              _verifyUser();
+            },500)
+         
+            function _verifyUser() {
+              $.ajax({
+                    url: "/api/helps/deactive",
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json;charset=UTF-8",
+                    },
+                    success: (res) => {
+                      showLoading(false);
+                      alert(res.msg);
+                      window.location.replace("/");
+                    },
+                    error: (res) => {
+                      showLoading(false);
+                      alert(res.responseJSON.msg);
+                    }
+                })
+            }
+          }
+            
+        }
+      </script>
+      </body>
+
+</html>

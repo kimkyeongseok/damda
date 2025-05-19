@@ -1,0 +1,657 @@
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>개인정보처리방침 </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="/img/logo/favicon_48.jpg" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" sizes="48x48" href="/img/icon/48.jpg" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/img/icon/192.jpg" />
+    <link rel="apple-touch-icon" sizes="512x512" href="/img/icon/512.jpg" />
+    <meta property="og:url" content="https://www.hidamda.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Damda" />
+    <meta property="og:description" content="당신의 아름다운 추억을 담다" />
+    <meta property="og:image" content="/img/icon/192.jpg" />
+<style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	font-size: 1.5rem;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body>
+	<article id="55d4d1b2-00a4-482c-91b1-a300ccfe9f2c" class="page sans">
+		<header><h1 class="page-title">개인정보처리방침 </h1></header>
+<div class="page-body">
+	<p id="fc33a2c8-6c6c-4f09-a09a-f893e694718f" class="">(주)플레이콘(“https://www.hidamda.com”이하 “담다”)는 개인정보보호법에 따라 이용자의 개인정보 보호 및 권익을 보호하고 개인정보와 관련한 이용자의 고충을 원활하게 처리할 수 있도록 다음과 같은 처리방침을 두고 있습니다.</p><p id="553fc356-1d52-440b-a20e-18f1bb359766" class="">“담다”는 개인정보처리방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.</p><p id="b39e6880-9590-4c4a-b198-254f5237c2c7" class="">본 방침은부터 2021년 7월 26일부터 시행됩니다.</p>
+<div id="menu_wrap">
+
+</div>
+<div id="wrap">
+	</p><p id="3faf8f2f-06c4-4d7a-b12e-af608c7abbaf" class=""><strong>제1조 목적</strong></p><p id="9c549d1e-99b7-440d-81f5-05d85b917bb6" class="">개인정보의 처리 목적&nbsp;”담다”는 개인정보를 다음의 목적을 위해 처리합니다. 처리한 개인정보는 다음의 목적이외의 용도로는 사용되지 않으며 이용 목적이 변경될 시에는 사전동의를 구할 예정입니다.</p><p id="59546313-d933-48e0-8fb8-3e0a6c51a8a1" class="">가. 홈페이지 회원가입 및 관리</p><p id="9d74bf67-b973-4502-83b1-6da88f36e4d3" class="">회원 가입의사 확인, 회원제 서비스 제공에 따른 본인 식별·인증, 회원자격 유지·관리, 제한적 본인확인제 시행에 따른 본인확인, 서비스 부정이용 방지, 만14세 미만 아동 개인정보 수집 시 법정대리인 동의 여부 확인, 각종 고지·통지, 고충처리, 분쟁 조정을 위한 기록 보존 등을 목적으로 개인정보를 처리합니다.</p><p id="fb08d463-28aa-4c4a-b6c8-e8667e93e9d1" class="">나. 민원사무 처리</p><p id="0c0efb39-1de9-4919-a32e-07650fcb9c23" class="">민원인의 신원 확인, 민원사항 확인, 사실조사를 위한 연락·통지, 처리결과 통보 등을 목적으로 개인정보를 처리합니다.</p><p id="6a5b6c77-34ac-4e09-8537-6c44d7fbd561" class="">다. 재화 또는 서비스 제공</p><p id="24aaad94-df96-4bf9-9712-4d1e9ef892ab" class="">물품배송, 서비스 제공, 청구서 발송, 콘텐츠 제공, 맞춤 서비스 제공, 본인인증, 연령인증, 요금결제·정산, 채권추심 등을 목적으로 개인정보를 처리합니다.</p><p id="4db4d6e3-0a1b-4d9f-baef-e5c422e61587" class="">라. 마케팅 및 광고에의 활용</p><p id="4b78d2fa-fdfe-4931-8766-1b79edb04594" class="">신규 서비스(제품) 개발 및 맞춤 서비스 제공, 이벤트 및 광고성 정보 제공 및 참여기회 제공 , 인구통계학적 특성에 따른 서비스 제공 및 광고 게재 , 서비스의 유효성 확인, 접속빈도 파악 또는 회원의 서비스 이용에 대한 통계 등을 목적으로 개인정보를 처리합니다.</p><p id="792a5587-8b30-4ab3-885a-e541b697b606" class=""><strong>제2조 개인정보 수집 내용</strong></p><ul id="89961910-0519-4269-980a-42b6400bb5ef" class="bulleted-list"><li>개인정보 항목 : 이메일, 휴대전화번호, 비밀번호, 로그인ID, 생년월일, 이름, 신용카드정보, 은행계좌정보, 서비스 이용 기록, 접속 로그, 쿠키, 접속 IP 정보, 결제기록, 법정대리인 이름, 법정대리인 휴대전화번호</li></ul><ul id="35703fa7-3011-42ff-b355-f0d6dc0d19ef" class="bulleted-list"><li>수집방법 : 개인정보를 수집하는 경우에는 반드시 사전에 이용자에게 해당 사실을 알리고 동의를 구하고 있으며, 아래와 같은 방법을 통해 개인정보를 수집합니다.</li></ul><ul id="5740b235-aedf-49bd-9cf7-7daebbc6c2db" class="bulleted-list"><li>회원가입 및 서비스 이용 과정에서 이용자가 개인정보 수집에 대해 동의를 하고 직접 입력하는 경우</li></ul><ul id="f10249d1-b1f0-4184-a617-6da5d0ffd756" class="bulleted-list"><li>제휴&nbsp;서비스&nbsp;등으로부터&nbsp;개인정보를&nbsp;제공받는&nbsp;경우</li></ul><ul id="ee114549-c1a5-4e3a-a17e-294d6f0c2128" class="bulleted-list"><li>고객센터&nbsp;상담과정에서&nbsp;수집</li></ul><ul id="eb1196b4-5ab9-4eec-ac30-720b30d2f530" class="bulleted-list"><li>온/오프라인&nbsp;이벤트에서&nbsp;진행되는&nbsp;이벤트&nbsp;등&nbsp;참여</li></ul><p id="2cb2cce7-dd51-4014-8b8f-89b67da772c1" class=""><b>서비스 이용 과정에서 이용자로부터 수집하는 개인정보는 아래와 같습니다.</b></p><ul id="884d0cc9-c40a-4744-9c51-63293a4e2af8" class="bulleted-list"><li>모바일&nbsp;기기&nbsp;이용&nbsp;시&nbsp;단말기&nbsp;식별번호,&nbsp;단말&nbsp;OS&nbsp;정보,&nbsp;Push&nbsp;수신여부</li></ul><ul id="5211e728-c315-4214-ba93-302d3b113ca6" class="bulleted-list"><li>이용자의&nbsp;브라우저&nbsp;종류&nbsp;및&nbsp;OS,&nbsp;방문&nbsp;기록(IP&nbsp;Address,&nbsp;접속시간),&nbsp;쿠키,&nbsp;ADID/IDFA</li></ul><ul id="5c760a52-a142-45a3-9baf-3823a031942b" class="bulleted-list"><li>유료서비스&nbsp;이용&nbsp;시&nbsp;발생한&nbsp;구매/결제/취소/환불&nbsp;내역</li></ul><ul id="b8601236-7f15-4c6b-a572-1e11a94623f2" class="bulleted-list"><li>보유근거 : 소비자의 권익 보호와 더 나은 서비스를 제공하기 위한 근거 데이터로 사용, 마케팅 이용</li></ul><ul id="cf4f2834-b2b0-4f71-9bf0-446b6680ae65" class="bulleted-list"><li>보유기간 : 회원탈퇴후 1년까지</li></ul><ul id="c688f24d-e80f-4997-a54c-834e759ee6f7" class="bulleted-list"><li>관련법령 : 신용정보의 수집/처리 및 이용 등에 관한 기록 : 3년, 소비자의 불만 또는 분쟁처리에 관한 기록 : 3년, 대금결제 및 재화 등의 공급에 관한 기록 : 5년, 계약 또는 청약철회 등에 관한 기록 : 5년, 표시/광고에 관한 기록 : 6개월</li></ul><p id="90922481-d744-464a-9ff7-1a9a34a94056" class=""><strong>제3조 개인정보 이용</strong></p><p id="a15c640a-a85b-4298-91c7-78da6b508efa" class="">회원관리,&nbsp;서비스&nbsp;제공·개선,&nbsp;신규&nbsp;서비스&nbsp;개발&nbsp;등을&nbsp;위해&nbsp;이용합니다.</p><p id="2eea9d78-bed5-4090-9f7a-c9500a4fdfc4" class="">회원&nbsp;가입&nbsp;시&nbsp;또는&nbsp;서비스&nbsp;이용&nbsp;과정에서&nbsp;홈페이지&nbsp;또는&nbsp;개별&nbsp;어플리케이션이나&nbsp;프로그램&nbsp;등을&nbsp;통해&nbsp;아래와&nbsp;같이&nbsp;서비스&nbsp;제공을&nbsp;위해&nbsp;필요한&nbsp;최소한의&nbsp;개인정보를&nbsp;수집하고&nbsp;있습니다.</p><p id="10cfd4f3-6886-46e7-adba-fc51e7d31d57" class="">이용자가&nbsp;스티커&nbsp;등의&nbsp;유료&nbsp;컨텐츠&nbsp;구입시&nbsp;회사는&nbsp;서비스&nbsp;제공(컨텐츠&nbsp;판매&nbsp;등의&nbsp;계약&nbsp;이행)을&nbsp;위해&nbsp;최소한의&nbsp;개인정보를&nbsp;수집합니다.</p><ul id="9ab1ce99-0419-45ed-a686-68b01d1a0bba" class="bulleted-list"><li>회원&nbsp;식별/가입의사&nbsp;확인,&nbsp;본인/연령&nbsp;확인,&nbsp;부정이용&nbsp;방지</li></ul><ul id="c0034805-36a2-4c97-80ba-ad64ad1cbb20" class="bulleted-list"><li>신규&nbsp;서비스&nbsp;개발,&nbsp;다양한&nbsp;서비스&nbsp;제공,&nbsp;문의사항&nbsp;또는&nbsp;불만처리,&nbsp;공지사항&nbsp;전달</li></ul><ul id="c8cfd456-33b4-4e69-8bb9-8e90b84e759f" class="bulleted-list"><li>유료서비스&nbsp;이용&nbsp;시&nbsp;컨텐츠&nbsp;등의&nbsp;전송이나&nbsp;요금&nbsp;정산</li></ul><ul id="e7572df2-ca52-4892-a5a3-c8533c14a26a" class="bulleted-list"><li>서비스의&nbsp;원활한&nbsp;운영에&nbsp;지장을&nbsp;주는&nbsp;행위(계정&nbsp;도용&nbsp;및&nbsp;부정&nbsp;이용&nbsp;행위&nbsp;등&nbsp;포함)에&nbsp;대한&nbsp;방지&nbsp;및&nbsp;제재</li></ul><ul id="d2331a89-6e4f-4b52-8fac-d2c3e6919beb" class="bulleted-list"><li>이벤트&nbsp;정보&nbsp;및&nbsp;참여기회&nbsp;제공,&nbsp;광고성&nbsp;정보&nbsp;제공&nbsp;등&nbsp;마케팅&nbsp;및&nbsp;프로모션&nbsp;목적으로&nbsp;개인정보를&nbsp;이용</li></ul><ul id="8be797a7-6ad4-4030-b85b-ac0ba2d8275b" class="bulleted-list"><li>인구통계학적&nbsp;특성과&nbsp;이용자의&nbsp;관심,&nbsp;기호,&nbsp;성향의&nbsp;추정을&nbsp;통한&nbsp;맞춤형&nbsp;컨텐츠&nbsp;추천&nbsp;및&nbsp;<em>마케팅에&nbsp;활용</em></li></ul><ul id="0c705f49-67c3-4faa-ab84-5a5ae6081d29" class="bulleted-list"><li>서비스&nbsp;이용&nbsp;기록,&nbsp;접속&nbsp;빈도&nbsp;및&nbsp;서비스&nbsp;이용에&nbsp;대한&nbsp;통계,&nbsp;프라이버시&nbsp;보호&nbsp;측면의&nbsp;서비스&nbsp;환경&nbsp;구축,&nbsp;서비스&nbsp;개선에&nbsp;활용</li></ul><p id="a44a7788-c226-498b-b964-093a0b489a9f" class=""><strong>제4조 개인정보의 처리 및 보유 기간</strong>  </p><p id="1d3d1911-d5e0-4c92-bec3-7b4fb7a3793d" class="">①&nbsp;“담다”는 법령에 따른 개인정보 보유·이용기간 또는 정보주체로부터 개인정보를 수집시에 동의 받은 개인정보 보유,이용기간 내에서 개인정보를 처리,보유합니다.  ② 각각의 개인정보 처리 및 보유 기간은 다음과 같습니다.</p><p id="c0bc255d-4e90-469a-aa9f-8b5594bcc419" class="">&lt;홈페이지 회원가입 및 관리&gt;</p><ul id="dcd26352-4123-4d59-b09e-92d08b4aa49f" class="bulleted-list"><li>&lt;홈페이지 회원가입 및 관리&gt;와 관련한 개인정보는 수집.이용에 관한 동의일로부터&lt;회원탈퇴후 3년까지&gt;까지 위 이용목적을 위하여 보유.이용됩니다.</li></ul><ul id="606f6d9b-85ce-4994-957e-49bff24c132c" class="bulleted-list"><li>보유근거 : 소비자의 권익 보호와 더 나은 서비스를 제공하기 위한 근거 데이터로 사용, 마케팅 이용</li></ul><ul id="ad9cd1d3-bd2b-499e-bcd8-b21b0a6e8a24" class="bulleted-list"><li>관련법령 : 1)신용정보의 수집/처리 및 이용 등에 관한 기록 : 3년 2) 소비자의 불만 또는 분쟁처리에 관한 기록 : 3년 3) 대금결제 및 재화 등의 공급에 관한 기록 : 5년 4) 계약 또는 청약철회 등에 관한 기록 : 5년 5) 표시/광고에 관한 기록 : 6개월  </li></ul><p id="84c069e5-80ef-43ed-9332-b901391f1474" class=""><strong>제5조 개인정보의 제3자 제공</strong>  </p><p id="9c737d99-d660-4687-bd02-3bd1d85528bd" class=""> ①&nbsp;”담다”는 정보주체의 동의, 법률의 특별한 규정 등 개인정보 보호법 제17조 및 제18조에 해당하는 경우에만 개인정보를 제3자에게 제공합니다.</p><p id="8492e771-5ba5-4d0d-85e4-bd3d3a165267" class="">②&nbsp;“담다”는 다음과 같이 개인정보를 제3자에게 제공하고 있습니다.</p><ul id="5c7fbc35-1b98-461d-b451-c541ae935f8c" class="bulleted-list"><li>개인정보를 제공받는 자 : 결제기관(아임포트, 카카오페이), 회원가입/로그인(카카오, 구글)</li></ul><p id="cbfa1718-7be3-49f8-92fd-b06216791c8c" class=""><strong>제6조 개인정보처리 위탁</strong>  </p><p id="75fca4b0-f1c2-4320-ad05-2b106ab1ed2a" class="">①&nbsp;“담다”는 원활한 개인정보 업무처리를 위하여 다음과 같이 개인정보 처리업무를 위탁하고 있습니다.</p><ul id="81e2e7c2-361c-4a57-aa68-610b6fb15f7b" class="bulleted-list"><li>위탁받는 자 (수탁자) : 결제기관(아임포트, 카카오페이), 회원가입/로그인(카카오, 구글)</li></ul><p id="e43adc29-5b2f-4392-98c0-3d2411f4fb97" class="">②&nbsp;”담다”는 위탁계약 체결시 개인정보 보호법 제25조에 따라 위탁업무 수행목적 외 개인정보 처리금지, 기술적․관리적 보호조치, 재위탁 제한, 수탁자에 대한 관리․감독, 손해배상 등 책임에 관한 사항을 계약서 등 문서에 명시하고, 수탁자가 개인정보를 안전하게 처리하는지를 감독하고 있습니다.</p><p id="33595c49-97b6-48cd-9774-e714e5cf1a1a" class="">③ 위탁업무의 내용이나 수탁자가 변경될 경우에는 지체없이 본 개인정보 처리방침을 통하여 공개하도록 하겠습니다.</p><p id="a8ad6a1e-2832-46d2-af36-52d120cc244c" class=""><strong>제7조 권리 행사</strong></p><p id="1054206b-5673-4407-9039-46f9bb32ed74" class="">정보주체와 법정대리인의 권리·의무 및 그 행사방법 이용자는 개인정보주체로써 다음과 같은 권리를 행사할 수 있습니다.</p><p id="41f823f3-26b4-4f5f-9704-cebd40617189" class="">① 정보주체는 (주)플레이콘에 대해 언제든지 개인정보 열람,정정,삭제,처리정지 요구 등의 권리를 행사할 수 있습니다.</p><p id="66194366-4424-41cc-9cf2-1672d8ef4de1" class="">② 제1항에 따른 권리 행사는(주)플레이콘에 대해 개인정보 보호법 시행령 제41조제1항에 따라 서면, 전자우편, 모사전송(FAX) 등을 통하여 하실 수 있으며 (주)플레이콘는 이에 대해 지체 없이 조치하겠습니다.</p><p id="19f719e5-bbae-4dac-9bc9-bbcaca8aa8d3" class="">③ 제1항에 따른 권리 행사는 정보주체의 법정대리인이나 위임을 받은 자 등 대리인을 통하여 하실 수 있습니다. 이 경우 개인정보 보호법 시행규칙 별지 제11호 서식에 따른 위임장을 제출하셔야 합니다.</p><p id="de7ebcb3-1961-4feb-aba8-bb212630cdbd" class="">④ 개인정보 열람 및 처리정지 요구는 개인정보보호법 제35조 제5항, 제37조 제2항에 의하여 정보주체의 권리가 제한 될 수 있습니다.</p><p id="0f346ca7-e707-4367-9db3-fada7f74b95c" class="">⑤ 개인정보의 정정 및 삭제 요구는 다른 법령에서 그 개인정보가 수집 대상으로 명시되어 있는 경우에는 그 삭제를 요구할 수 없습니다.</p><p id="53634ac8-09b1-44ec-be7f-fad34f1b4738" class="">⑥ (주)플레이콘는 정보주체 권리에 따른 열람의 요구, 정정·삭제의 요구, 처리정지의 요구 시 열람 등 요구를 한 자가 본인이거나 정당한 대리인인지를 확인합니다.</p><p id="db988648-44a1-4f85-b00c-cd8e943b897f" class=""><strong>제8조 개인정보의 항목</strong>   </p><p id="fe3d0654-2ef6-4375-93af-e83b10885b15" class="">①&nbsp;”담다”는 다음의 개인정보 항목을 처리하고 있습니다.</p><p id="6203d7d3-5a5c-45b8-b09f-3ef63dcde71e" class="">&lt;제화 또는 서비스 제공&gt;</p><ul id="1df9c59c-2047-4d61-9cbe-d51d0955b216" class="bulleted-list"><li>필수항목 : 이메일, 휴대전화번호, 로그인ID, 생년월일, 이름, 신용카드정보, 은행계좌정보, 서비스 이용 기록, 접속 로그, 쿠키, 접속 IP 정보, 결제기록</li></ul><ul id="c6e80fbc-a249-4a91-a67c-69644e0a4fec" class="bulleted-list"><li>선택항목 : 법정대리인 이름, 법정대리인 이메일, 법정대리인 전화번호</li></ul><p id="53df0faf-677b-4713-8e8a-7e5fd9232a72" class=""><strong>제9조 개인정보의 파기</strong></p><p id="3769e2bc-b57f-4a1c-87f8-db562ebe9f77" class="">개인정보의 파기는 원칙적으로 개인정보 처리목적이 달성된 경우에는 지체없이 해당 개인정보를 파기합니다. 파기의 절차, 기한 및 방법은 다음과 같습니다.</p><ul id="2877f2aa-d614-4597-93d1-5c821a2b73cb" class="bulleted-list"><li>파기절차 이용자가 입력한 정보는 목적 달성 후 별도의 DB에 옮겨져(종이의 경우 별도의 서류) 내부 방침 및 기타 관련 법령에 따라 일정기간 저장된 후 혹은 즉시 파기됩니다. 이 때, DB로 옮겨진 개인정보는 법률에 의한 경우가 아니고서는 다른 목적으로 이용되지 않습니다.  </li></ul><ul id="e2601192-2d0c-4c2e-9da9-23e2a4c05686" class="bulleted-list"><li>파기기한 이용자의 개인정보는 개인정보의 보유기간이 경과된 경우에는 보유기간의 종료일로부터 5일 이내에, 개인정보의 처리 목적 달성, 해당 서비스의 폐지, 사업의 종료 등 그 개인정보가 불필요하게 되었을 때에는 개인정보의 처리가 불필요한 것으로 인정되는 날로부터 5일 이내에 그 개인정보를 파기합니다.또한, 회원 탈퇴일로부터 최대 1년간 개인정보를 보관 후 파기합니다.</li></ul><ul id="3170414d-5897-4e40-a52a-b6bffa91e2c6" class="bulleted-list"><li>파기방법</li></ul><p id="82b7b0e3-5d3f-4d42-8879-844016ac4318" class="">전자적 파일 형태의 정보는 기록을 재생할 수 없는 기술적 방법을 사용합니다</p><p id="1fbfdd03-ce23-48db-9c7d-3ad2bcb99339" class=""><strong>제10조 개인정보 자동 수집 거부</strong></p><p id="7e5d2b20-8716-4bab-b117-83810b2eb80a" class="">(주)플레이콘 은 정보주체의 이용정보를 저장하고 수시로 불러오는 ‘쿠키’를 사용합니다.</p><div class="indented"><p id="e679fd2c-9bc9-4d0c-bf3e-0ebd20dc5168" class=""><strong>쿠키란?</strong></p><p id="b5c4023b-5824-4f24-9094-0acb17a1d206" class="">쿠키란 웹사이트를 운영하는데 이용되는 서버가 이용자의 브라우저에 보내는 아주 작은 텍스트 파일로서 이용자의 컴퓨터에 저장됩니다. 쿠키에는 이용자의 아이디만 저장이 됩니다.</p><p id="e80283b1-2b19-4803-b548-073dca441676" class=""><strong>쿠키 사용 목적?</strong></p><p id="58f39a91-e59f-4420-aa60-bccf9aed3d4c" class="">쿠키를 통해 이용자가 선호하는 설정 등을 저장하여 이용자에게 보다 빠른 웹 환경을 지원하며, 편리한 이용을 위해 서비스 개선에 활용합니다. 이를 통해 이용자는 보다 손쉽게 서비스를 이용할 수 있게 됩니다.</p><p id="7d5327f4-dc2d-478e-b873-ff3c4642aca3" class=""><strong>쿠키를 거부하고 싶다면?</strong></p><p id="0b29bcf4-dc4a-4034-a2d6-7789bc397f08" class="">이용자는 쿠키 설치에 대한 선택권을 가지고 있습니다. 따라서, 이용자는 웹 브라우저에서 옵션을 설정함으로써 모든 쿠키를 허용하거나, 쿠키가 저장될 때마다 확인을 거치거나, 모든 쿠키의 저장을 거부할 수도 있습니다.</p><p id="7dedcda2-df1d-4396-9f92-a2f24cf56f08" class="">다만 쿠키 설치를 거부할 경우 웹 사용이 불편해지며 로그인이 필요한 일부 서비스 이용에 어려움이 있을 수 있습니다.</p></div><p></p><p id="5dbacaf8-9dfe-4359-8a6c-b1cc7eb123a9" class=""><strong>제11조 개인정보 보호책임자 작성</strong></p><p id="c2f68eb0-2c4e-4e78-b38f-da7986ddcdc0" class="">①&nbsp;“담다”&nbsp;는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.</p><ul id="a62c9fb7-9bec-485d-b423-cbc6b6b55e9e" class="bulleted-list"><li>개인정보 보호책임자</li></ul><ul id="c52fd219-5b9f-4f96-9fef-a9e1fe942149" class="bulleted-list"><li>성명 : 오현규</li></ul><ul id="eaabdec4-0c14-4691-acf4-f6ee9a6c2605" class="bulleted-list"><li>직책 : 개발자</li></ul><ul id="4c4cd43d-0afa-4af9-98c7-c71f06d0b119" class="bulleted-list"><li>직급 : 개인정보 보호책임자</li></ul><ul id="7b5eab1d-39c0-40a0-a109-d7f9f59ea901" class="bulleted-list"><li>연락처 : 070-8825-5004, info@ideaconcert.com</li></ul><p id="d6bc8517-1b72-44fd-93cb-0613a4c8ac89" class="">② 정보주체께서는 (주)플레이콘의 서비스(또는 사업)을 이용하시면서 발생한 모든 개인정보 보호 관련 문의, 불만처리, 피해구제 등에 관한 사항을 개인정보 보호책임자 및 담당부서로 문의하실 수 있습니다. &nbsp;“담다”는 정보주체의 문의에 대해 지체 없이 답변 및 처리해드릴 것입니다.</p><p id="5fee6a96-256d-4fea-948a-93d82bad3449" class=""><strong>제12조 개인정보 처리방침 변경</strong></p><p id="1f32beeb-47d3-483c-a3e3-086f1a85c2ee" class="">①이 개인정보처리방침은 시행일로부터 적용되며, 법령 및 방침에 따른 변경내용의 추가, 삭제 및 정정이 있는 경우에는 변경사항의 시행 7일 전부터 공지사항을 통하여 고지할 것입니다.</p><p id="9891f515-3028-49d7-815c-340906d77279" class=""><strong>제13조 개인정보의 안전성 확보 조치</strong></p><p id="a0cff867-4e74-442f-8366-90e4d299437a" class="">개인정보보호법 제29조에 따라 다음과 같이 안전성 확보에 필요한 기술적/관리적 및 물리적 조치를 하고 있습니다.</p><ol id="95dbb62c-d954-4542-abde-c138a619df6c" class="numbered-list" start="1"><li>정기적인 자체 감사 실시 개인정보 취급 관련 안정성 확보를 위해 정기적(분기 1회)으로 자체 감사를 실시하고 있습니다.  </li></ol><ol id="88ac01e1-b302-4e31-bcdc-141e887ebf9e" class="numbered-list" start="2"><li>개인정보 취급 직원의 최소화 및 교육 개인정보를 취급하는 직원을 지정하고 담당자에 한정시켜 최소화하여 개인정보를 관리하는 대책을 시행하고 있습니다.  </li></ol><p id="004e9975-5e21-427c-8dcb-ad9dc5f7e042" class=""> 3.   내부관리계획의 수립 및 시행 개인정보의 안전한 처리를 위하여 내부관리계획을 수립하고 </p><div class="indented"><p id="43a30d09-ffb8-4796-bdc9-1668fcd6234e" class=""> 시행하고 있습니다. </p></div><p></p><p id="424ba88a-fc67-4bff-a099-0bbf0031dcd3" class=""> 4.  해킹 등에 대비한 기술적 대책 “담다”는 해킹이나 컴퓨터 바이러스 등에 의한 개인정보 유출 및    훼손을 막기 위하여 보안프로그램을 설치하고 주기적인 갱신·점검을 하며 외부로부터 접근이 통제된 구역에 시스템을 설치하고 기술적/물리적으로 감시 및 차단하고 있습니다.  </p><p id="ba176e7a-b005-460e-b1bd-b986f931b5de" class="">5.   개인정보의 암호화 이용자의 개인정보는 비밀번호는 암호화 되어 저장 및 관리되고 있어, 본인만이 알 수 있으며 중요한 데이터는 파일 및 전송 데이터를 암호화 하거나 파일 잠금 기능을 사용하는 등의 별도 보안기능을 사용하고 있습니다. </p><p id="d45ceae3-6d02-4bf5-83b3-2e6bf8c5c893" class="">6.   접속기록의 보관 및 위변조 방지 개인정보처리시스템에 접속한 기록을 최소 6개월 이상 보관, 관리하고 있으며, 접속 기록이 위변조 및 도난, 분실되지 않도록 보안기능 사용하고 있습니다.  </p><p id="d4706c80-673d-49cf-903a-bd2c47c15386" class="">7.   개인정보에 대한 접근 제한 개인정보를 처리하는 데이터베이스시스템에 대한 접근권한의 부여,변경,말소를 통하여 개인정보에 대한 접근통제를 위하여 필요한 조치를 하고 있으며 침입차단시스템을 이용하여 외부로부터의 무단 접근을 통제하고 있습니다.  </p><p id="47d46faa-7d6e-4435-994a-716df49c7416" class="">8.   문서보안을 위한 잠금장치 사용 개인정보가 포함된 서류, 보조저장매체 등을 잠금장치가 있는 안전한 장소에 보관하고 있습니다. </p><p id="a40eddf2-6f0f-4cab-b04e-6dd04e0a2494" class=""> 9.   비인가자에 대한 출입 통제 개인정보를 보관하고 있는 물리적 보관 장소를 별도로 두고 이에 대해 출입통제 절차를 수립, 운영하고 있습니다.</p></div>
+</article>
+</div>
+<script src="/helps/js/createMenu.js"></script>
+</body></html>

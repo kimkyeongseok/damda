@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/admin_login.css" />
+    <title>관리자 로그인</title>
+  </head>
+
+  <body>
+    <video
+      id="bgvideo"
+      src="/video/web.mp4"
+      playsinline
+      autoplay
+      muted
+      loop
+    ></video>
+    <div id="adminForm">
+      <form>
+        <div id="logo">
+          <img id="logoImg" src="/img/logo/black.png" />
+        </div>
+
+        <p>
+          <label for="userId"></label>
+          <input
+            type="text"
+            placeholder="아이디"
+            name="adminId"
+            id="adminId"
+            required
+          />
+        </p>
+        <p>
+          <label for="userId"></label>
+          <input
+            type="password"
+            placeholder="비밀번호"
+            name="adminPw"
+            id="adminPw"
+            onkeydown="_login(event)"
+            required
+          />
+        </p>
+        <div id="loginBtn" type="button" onclick="login()" style="cursor: pointer">관리자 로그인</div>
+      </form>
+    </div>
+  </body>
+  <script>
+    function _login(e) {
+      if (e.keyCode === 13) {
+        login();
+      }
+    }
+  </script>
+
+  <script type="text/javascript" src="/js/admin.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</html>

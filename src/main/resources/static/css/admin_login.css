@@ -1,0 +1,64 @@
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 1200px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  html,
+  body {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  html,
+  body {
+    font-size: 12px;
+  }
+}
+#bgvideo {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+#adminForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: 20rem;
+  background-color: #fff;
+  opacity: 0.96;
+  margin: 0 auto;
+}
+#logo {
+  width: 100%;
+  text-align: center;
+}
+#logoImg {
+  width: 7rem;
+}
+#loginBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 10rem;
+  height: 3rem;
+  background-color: #1d1d1d;
+  color: #fff;
+}

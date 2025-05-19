@@ -1,0 +1,76 @@
+imp:
+  key: 8020875671750711
+  secret: CxC6bzx2zJ7nvH3dSPIYAR7CKZAEhc7TKJZWixZSh6gMOj0G8JFJBMllLV0387WTQWP9tP1KVhwKAxqJ
+jwt:
+  sign:
+    key: hi_damda_ideaconcert
+spring:
+  redis:
+    host: localhost
+    port: 6379
+    password: ekaek0613!@#
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://222.239.218.187:3306/damda?characterEncoding=UTF-8&serverTimezone=UTC
+    username: toonflix
+    password: toonflix1004
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+    show_sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  session:
+    jdbc:
+      initialize-schema: always
+    timeout: -1
+
+
+  profiles:
+    active: prod
+    servlet:
+      multipart:
+        enabled: true
+        max-file-size: 100MB
+        max-request-size: 100MB
+    mail:
+      host: smtp.gmail.com
+      # SSL => 465
+      port: 587
+      username: icon.ideaconcert@gmail.com
+      password: zhstjxm0613!@#
+      properties.mail.smtp:
+        auth: true
+        starttls.enable: true
+        ssl.trust: smtp.gmail.com
+server:
+  port: 9000
+  servlet:
+    session:
+      cookie:
+        max-age: -1
+  ssl:
+    enabled: true
+    key-store: keystore.p12
+    key-password: damda5004
+    key-store-password: damda5004
+    key-store-type: PKCS12
+    key-alias: bns-ssl
+    trust-store: keystore.p12
+    trust-store-password: damda5004
+
+damda:
+  url: http://222.239.218.109:9000
+  #url https://localhost:9000
+logging:
+  pattern:
+    console: "[%d{HH:mm:ss.SSS}][%-5level][%logger.%method:line%line] - %msg%n"
+  level:
+    org:
+      springframework: INFO

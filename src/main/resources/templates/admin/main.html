@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layout/admin_layout}"
+>
+  <head>
+    <link rel="icon" type="image/x-icon" href="/img/logo/favicon_48.jpg" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DashBoard</title>
+  </head>
+    <div layout:fragment="content">
+    <h3>대시보드</h3>
+    <div id="users">
+      <div>
+        가입 유저수 
+        <h4 id="totalUsers" style="font-weight: bold;"></h4> 
+      </div> 
+    </div>
+    <div id="posts">
+      <div>
+        업로드된 게시물수 
+        <h4 id="totalPosts" style="font-weight: bold;"></h4>
+      </div> 
+    </div>
+    <div id="payments">
+      <div>
+        구매된 상품수 
+        <h4 id="totalPayments" style="font-weight: bold;"></h4>
+      </div> 
+    </div>
+
+    <script type="text/javascript" src="/js/admin_main.js"></script>
+</div>
+</html>

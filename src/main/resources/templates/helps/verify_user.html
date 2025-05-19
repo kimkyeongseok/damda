@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/helps/css/reset_password.css" />
+    <link rel="icon" type="image/x-icon" href="/img/logo/favicon_48.jpg" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" sizes="48x48" href="/img/icon/48.jpg" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/img/icon/192.jpg" />
+    <link rel="apple-touch-icon" sizes="512x512" href="/img/icon/512.jpg" />
+    <meta property="og:url" content="https://www.hidamda.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Damda" />
+    <meta property="og:description" content="당신의 아름다운 추억을 담다" />
+    <meta property="og:image" content="/img/icon/192.jpg" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <title>이메일 인증</title>
+  </head>
+  <body>
+    <div
+      id="wrap"
+      style="
+        max-width: 500px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 15px;
+      "
+    >
+      <img src="/img/logo/black.png" alt="Damda" width="140" height="55" />
+      <p id="cut_line" style="border-bottom: 0.063rem solid #e8e8e8"></p>
+      <p style="color: black; font-size: 1rem">
+        <strong>비밀번호 재설정</strong>을 위한 <strong>본인 확인</strong>이
+        필요합니다.<br />
+        회원님의 이메일과 닉네임을 입력해주세요
+      </p>
+      <p></p>
+      <div style="display: flex; flex-direction: column;">
+        <input 
+          type="text" 
+          id="userId" 
+          name="userId"
+          placeholder="E-MAIL" 
+          style="width: 100%"
+        />
+        <input
+          type="text"
+          placeholder="NICKNAME"
+          id="nickName"
+          name="nickName"
+          style="width: 100%; border-top: none; margin-bottom: 1rem"
+        />
+      </div>
+      <!-- <p id="noti" style="color: #ff0034;"></p><br> -->
+      <a style="text-decoration: none">
+        <div
+          id="button"
+          style="
+            position: relative;
+            border: none;
+            text-align: center;
+            background-color: #ff0034;
+            padding: 6px 20px 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+          "
+          onclick="verifyUser()"
+        >
+          <div
+            id="loading"
+            class="spinner-border text-light"
+            role="status"
+            style="visibility: hidden; position: absolute"
+          >
+            <span class="sr-only">Loading...</span>
+          </div>
+          <span id="buttonText" style="color: #fff; font-size: 1rem">확인</span>
+        </div>
+      </a>
+    </div>
+    <script type="text/javascript" src="/helps/js/showLoading.js"></script>
+    <script>
+      function showLoading(isShow) {
+        if (isShow) {
+          button.style.pointerEvents = "none";
+          document.getElementById("loading").style.visibility = "visible";
+          document.getElementById("buttonText").style.visibility = "hidden";
+        } else {
+          document.getElementById("loading").style.visibility = "hidden";
+          document.getElementById("buttonText").style.visibility = "visible";
+          button.style.pointerEvents = "auto";
+        }
+      }
+
+      function verifyUser() {
+        showLoading(true);
+        let button = document.getElementById("button");
+        let userId = document.getElementById("userId").value;
+        let nickName = document.getElementById("nickName").value;
+
+        setTimeout(() => {
+          _verifyUser();
+        }, 300);
+
+        function _verifyUser() {
+          $.ajax({
+            url: "/api/helps/send/email/reset-password",
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json;charset=UTF-8",
+            },
+            data: JSON.stringify({
+              userId: userId,
+              nickName: nickName,
+            }),
+            success: (res) => {
+              showLoading(false);
+              alert(res.msg);
+              window.location.reload();
+            },
+            error: (res) => {
+              showLoading(false);
+              alert(res.responseJSON.msg);
+            },
+          });
+        }
+      }
+    </script>
+  </body>
+</html>

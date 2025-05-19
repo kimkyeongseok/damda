@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/reset_password.css" />
+    <link rel="icon" type="image/x-icon" href="/img/logo/favicon.jpg" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" sizes="48x48" href="/img/icon/48.jpg" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/img/icon/192.jpg" />
+    <link rel="apple-touch-icon" sizes="512x512" href="/img/icon/512.jpg" />
+    <meta property="og:url" content="https://www.hidamda.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Damda" />
+    <meta property="og:description" content="당신의 아름다운 추억을 담다" />
+    <meta
+      property="og:image"
+      content="/img/icon/192.jpg"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>알림</title>
+    </head>
+      <body>
+        <div
+          id="wrap"
+          style="
+            max-width: 500px;
+            box-sizing: border-box;
+            margin: 0 auto;
+            padding: 15px;
+          "
+        >
+          <img
+            src="/img/logo/black.png"
+            alt="Damda"
+            width="140"
+            height="55"
+          />
+          <p id="cut_line" style="border-bottom: 0.063rem solid #e8e8e8"></p>
+            <strong th:text=${status}></strong> <br>
+            <p style="color: #ff0034" th:text=${msg}></p> 
+          <span id="noti" style="color: #ff0034;"></span><br />
+          <a style="text-decoration: none">
+            <div
+              id="button"
+              style="
+                border: none;
+                text-align: center;
+                background-color: #ff0034;
+                padding: 6px 20px 10px 20px;
+                border-radius: 6px;
+                cursor: pointer;
+              "
+              onclick="goHome()"
+            >
+              <span style="color: #fff; font-size: 1rem;">확인</span>
+            </div>
+         
+          </a>
+        </div>
+      </body>
+      <script>
+          function goHome() {
+              self.close();
+          }
+      </script>
+    </html>
+</html> 
+
